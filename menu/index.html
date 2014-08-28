@@ -2,22 +2,20 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Toggle Menu</title>
-
-	<!-- css -->
+	<title>Responsive Menu</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<nav id="menu">
-	<div class="logo">logo aqui</div>
-	<a class="menu-button" onclick="toggleNav(); return false;">MENU</a>
+<nav id="nav-menu">
+	<a href="index.html"><img src="img/logo.png" class="nav-logo" alt="Logo" /></a>
+	<a class="menu-button" onclick="toggleNav(); return false;" title="Menu"></a>
 	<ul id="nav-list" role="navigation">
 		<li><a href="#">HOME</a></li>
 		<li class="dropdown"><a>SERVICES</a>
 			<ul>
 				<li><a href="#">item 1</a></li>
-				<li><a href="#">item 1</a></li>
+				<li><a href="#">item dropdown 2</a></li>
 			</ul>
 		</li>
 		<li><a href="#">WORK</a></li>
@@ -40,6 +38,6 @@
 	}
 </script>
 <!-- toggle menu script end -->
-	
+
 </body>
 </html>

@@ -12,166 +12,189 @@
 
 /* navigation -------------------------------- */
 
-#menu {
-    background-color: #333;
-    color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
+#nav-menu {
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
-    #menu .logo {
-        float: left;
+  #nav-menu .nav-logo {
+    float: left;
+    width: 80px;
+  }
+
+  #nav-menu .menu-button {
+    display: hidden;
+    visibility: hidden;
+  }
+
+    #nav-menu #nav-list {
+      float: right;
+      margin-top: 20px;
     }
 
-    #menu .menu-button {
-        display: hidden;
-        visibility: hidden;
-    }
+      #nav-menu li {
+        display: inline-block;
+      }
 
-    #menu #nav-list {
-        float: right;
-    }
-
-        #menu li {
-            display: inline-block;
+        #nav-menu li a {
+          display: block;
+          padding: 0 20px 20px;
+          font-size: 14px;
+          color: #eee;
         }
 
-            #menu li a {
-                display: block;
-                padding: 0 10px;
-                font-size: 14px;
-                color: #ccc;
-            }
+          #nav-menu li a:hover {
+            color: cyan;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+          }
+
+          .dropdown a {
+            padding-bottom: 34px !important;
+          }
 
             .dropdown ul {
-                background: #888;
-                display: hidden;
-                margin: 0 0 0 10px;
-                padding: 10px;
-                position: absolute;
-                visibility: hidden;
-                min-width: 100px;
-                height: 0px;
-                transition: all 0.5s;
-                -webkit-transition: all 0.5s;
-                -moz-transition: all 0.5s;
-                -o-transition: all 0.5s;
+              background: #555;
+              display: hidden;
+              margin: 0 0 0 10px;
+              padding: 10px;
+              position: absolute;
+              visibility: hidden;
+              transition: all 0.2s;
+              -webkit-transition: all 0.2s;
+              -moz-transition: all 0.2s;
+              -o-transition: all 0.2s;
             }
 
-                .dropdown:hover ul {
-                    display: block;
-                    height: 55px;
-                    position: absolute;
-                    visibility: visible;
-                    transition: all 0.5s;
-                    -webkit-transition: all 0.5s;
-                    -moz-transition: all 0.5s;
-                    -o-transition: all 0.5s;
+              .dropdown:hover ul {
+                display: block;
+                position: absolute;
+                visibility: visible;
+              }
+
+              .dropdown ul li {
+                display: block !important;
+              }
+
+                .dropdown ul li a {
+                  color: #ddd !important;
+                  padding: 10px 20px 10px 10px !important;
                 }
 
-                .dropdown ul li {
-                    display: block !important;
-                }
-
-                    .dropdown ul li a {
-                        color: #fff !important;
-                        font-style: italic;
-                        margin: 10px 0;
-                    }
-
+                  .dropdown ul li a:hover {
+                    color: cyan !important;
+                  }
 
 
 /* responsive -------------------------------- */
 
 @media screen and (max-width: 960px) {
 
-#menu {
-    padding: 20px;
-    text-align: right;
+#nav-menu {
+  height: auto;
+  padding: 20px 20px 15px;
 }
 
-    #menu .menu-button {
-    color: #fff;
+  #nav-menu .menu-button {
+    background: url(img/responsive-menu.png) left top no-repeat;
     display: block;
+    float: right;
     font-size: 12px;
-    text-align: right;
+    height: 30px;
+    margin-top: 10px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     visibility: visible;
+    width: 30px;
+  }
+
+    #nav-menu .menu-button:hover {
+      cursor: pointer;
+      opacity: 0.75;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
     }
 
-        #menu .menu-button:hover {
-            color: #aaa;
-            cursor: pointer;
-        }
-
-    #menu #nav-list {
-        float: none;
-        height: 0px;
-        overflow: hidden;
-        transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        width: 100%;
+    #nav-menu #nav-list {
+      float: none;
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      width: 100%;
     }
 
-        #menu #nav-list.expanded {
-            height: 200px;
-            transition: all 0.3s;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -o-transition: all 0.3s;
+      #nav-menu #nav-list.expanded {
+        height: 240px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+      }
+
+      #nav-menu li {
+        border-top: 1px solid #444;
+        display: block;
+        margin: 0;
+        text-align: center;
+      }
+
+        #nav-menu li:first-of-type, #nav-menu li li {
+          border: none;
         }
 
-        #menu li {
-            display: block;
-            margin: 0;
-            text-align: center;
+        #nav-menu li a {
+          padding: 15px 0 12px;
+          font-size: 14px;
+          color: #eee;
         }
 
-            #menu li a {
-                display: block;
-                padding: 10px 0;
-                font-size: 14px;
-                color: #ccc;
-            }
-
-                #menu li a:hover {
-                    color: #fff;
-                }
+          .dropdown a {
+            padding-bottom: 10px !important;
+          }
 
             .dropdown ul {
-                background: transparent;
+              background: transparent;
+              display: block;
+              margin: 0;
+              padding: 0;
+              position: relative;
+              visibility: visible;
+              min-width: 100px;
+              height: auto;
+              transition: all 0.5s;
+              -webkit-transition: all 0.5s;
+              -moz-transition: all 0.5s;
+              -o-transition: all 0.5s;
+            }
+
+              .dropdown:hover ul {
                 display: block;
-                margin: 0;
-                padding: 0;
-                position: relative;
-                visibility: visible;
-                min-width: 100px;
                 height: auto;
+                position: relative;
                 transition: all 0.5s;
                 -webkit-transition: all 0.5s;
                 -moz-transition: all 0.5s;
                 -o-transition: all 0.5s;
-            }
-
-                .dropdown:hover ul {
-                    display: block;
-                    height: auto;
-                    position: relative;
-                }
+              }
 
                 .dropdown ul li {
-                    display: block !important;
+                  display: block !important;
                 }
 
-                    .dropdown ul li a {
-                        color: #999 !important;
-                        font-style: italic;
-                        margin: 0;
-                    }
-
-                        .dropdown ul li a:hover {
-                            color: #fff !important;
-                        }
+                  .dropdown ul li a {
+                    padding: 10px !important;
+                  }
 
 }
