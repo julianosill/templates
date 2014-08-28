@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Toggle Menu</title>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<nav id="menu">
+	<div class="logo">logo aqui</div>
+	<a class="menu-button" onclick="toggleNav(); return false;">MENU</a>
+	<ul id="nav-list" role="navigation">
+		<li><a href="#">HOME</a></li>
+		<li class="dropdown"><a>SERVICES</a>
+			<ul>
+				<li><a href="#">item 1</a></li>
+				<li><a href="#">item 1</a></li>
+			</ul>
+		</li>
+		<li><a href="#">WORK</a></li>
+		<li><a href="#">CONTACT</a></li>
+	</ul>
+</nav>
+
+<center>conteúdo aqui.</center>
+
+<!-- toggle menu script -->
+<script>
+	var originalNavClasses;
+	function toggleNav() {
+	    var elem = document.getElementById('nav-list');
+	    var classes = elem.className;
+	    if (originalNavClasses === undefined) {
+	        originalNavClasses = classes;
+	    }
+	    elem.className = /expanded/.test(classes) ? originalNavClasses : originalNavClasses + 'expanded';
+	}
+</script>
+<!-- toggle menu script end -->
+	
+</body>
+</html>
