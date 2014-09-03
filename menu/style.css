@@ -38,18 +38,19 @@
       }
 
         #nav-menu li a {
-          display: block;
-          padding: 0 20px 20px;
-          font-size: 14px;
           color: #eee;
+          display: block;
+          font-size: 14px;
+          padding: 0 20px 20px;
         }
 
           #nav-menu li a:hover {
             color: cyan;
+            cursor: pointer;
             transition: all 0.3s;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -o-transition: all 0.3s;
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              -o-transition: all 0.3s;
           }
 
           .dropdown a {
@@ -58,19 +59,24 @@
 
             .dropdown ul {
               background: #555;
+              border-radius: 0 0 6px 6px;
+                -webkit-border-radius: 0 0 6px 6px;
+                -moz-border-radius: 0 0 6px 6px;
               display: hidden;
               margin: 0 0 0 10px;
+              opacity: 0;
               padding: 10px;
               position: absolute;
+              transition: all 0.3s;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
               visibility: hidden;
-              transition: all 0.2s;
-              -webkit-transition: all 0.2s;
-              -moz-transition: all 0.2s;
-              -o-transition: all 0.2s;
             }
 
               .dropdown:hover ul {
                 display: block;
+                opacity: 1;
                 position: absolute;
                 visibility: visible;
               }
@@ -106,9 +112,9 @@
     height: 30px;
     margin-top: 10px;
     transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
     visibility: visible;
     width: 30px;
   }
@@ -117,9 +123,9 @@
       cursor: pointer;
       opacity: 0.75;
       transition: all 0.3s;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
     }
 
     #nav-menu #nav-list {
@@ -127,18 +133,18 @@
       height: 0px;
       overflow: hidden;
       transition: all 0.3s;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
       width: 100%;
     }
 
       #nav-menu #nav-list.expanded {
         height: 240px;
         transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
       }
 
       #nav-menu li {
@@ -166,6 +172,7 @@
               background: transparent;
               display: block;
               margin: 0;
+              opacity: 1;
               padding: 0;
               position: relative;
               visibility: visible;
